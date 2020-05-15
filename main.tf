@@ -44,3 +44,12 @@ output "vcs_commit_message" {
 output "vcs_commit_author" {
   value = local.run.vcs[0].commit[0].author.username
 }
+
+resource "null_resource" "run" {
+  triggers = {
+    always_run = "${timestamp()}"
+  }
+  provisioner "local-exec" {
+    command = "echo ${local.run.vcs[0].commit[0].sha}"
+  }
+}
