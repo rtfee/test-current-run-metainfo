@@ -1,6 +1,7 @@
-
-
-provider "scalr" {}
+provider "scalr" {
+  hostname = "${var.hostname}"
+  token    = "${var.token}"  
+}
 
 data "scalr_current_run" "current" {}
 locals {
