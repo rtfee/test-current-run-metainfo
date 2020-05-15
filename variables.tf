@@ -1,2 +1,0 @@
-variable "hostname" {}
-variable "token" {}
