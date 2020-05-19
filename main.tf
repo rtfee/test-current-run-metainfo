@@ -51,5 +51,5 @@ resource "null_resource" "run" {
   }
 }
 
-resource "null_resource" "test_3" {
+resource "null_resource" "test_4" {
 }
