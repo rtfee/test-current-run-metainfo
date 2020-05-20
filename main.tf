@@ -50,7 +50,3 @@ resource "null_resource" "run" {
     command = "echo ${local.run.vcs[0].commit[0].sha}"
   }
 }
-
-resource "null_resource" "test_6" {
-
-}
